@@ -175,34 +175,35 @@ section{
     line-height: 1.8;
 }
 
-.about .row{
+.about .row {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between; /* Ensures even spacing */
 }
 
-.about .row .title{
+.about .row .title {
     font-size: 3rem;
     color: var(--primary-color);
     padding: .5rem 0;
 }
 
-.about .row .progress-bar{
-    flex: 1 1 40rem;
+.about .row .progress-bar {
+    flex: 1 1 45%; /* Reduced width for better balance */
     padding: 1rem;
 }
 
-.about .row .progress-bar .progress{
+.about .row .progress-bar .progress {
     padding: 1rem 0;
 }
 
-.about .row .progress-bar .progress h3{
+.about .row .progress-bar .progress h3 {
     display: flex;
     justify-content: space-between;
     color: var(--light-color);
     font-size: 2rem;
 }
 
-.about .row .progress-bar .progress .bar{
+.about .row .progress-bar .progress .bar {
     height: 1rem;
     width: 100%;
     border: .2rem solid var(--primary-color);
@@ -210,51 +211,39 @@ section{
     margin: .5rem 0;
 } 
 
-.about .row .progress-bar .progress .bar span{
+.about .row .progress-bar .progress .bar span {
     display: block;
     background: var(--primary-color);
     border-radius: 5rem;
     height: 100%;
 }
 
-.about .row .progress-bar .progress:nth-child(2) .bar span{
-    width: 80%;
-}
+.about .row .progress-bar .progress:nth-child(1) .bar span { width: 80%; }
+.about .row .progress-bar .progress:nth-child(2) .bar span { width: 75%; }
+.about .row .progress-bar .progress:nth-child(3) .bar span { width: 65%; }
+.about .row .progress-bar .progress:nth-child(4) .bar span { width: 60%; }
 
-.about .row .progress-bar .progress:nth-child(3) .bar span{
-    width: 75%;
-}
-
-.about .row .progress-bar .progress:nth-child(4) .bar span{
-    width: 65%;
-}
-
-.about .row .progress-bar .progress:nth-child(5) .bar span{
-    width: 60%;
-}
-
-.about .row .personal-info{
-    flex: 1 1 55rem;
+.about .row .personal-info {
+    flex: 1 1 50%; /* Increased width for better balance */
     padding: 1rem;
 }
 
-.about .row .personal-info .box-container{
+.about .row .personal-info .box-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column; /* Stack items vertically */
 }
 
-.about .row .personal-info .box-container .box{
-    padding: 1rem;
-}
-
-.about .row .personal-info .box-container .box h3{
-    font-size: 2rem;
-    color: var(--bg-color);
+.about .row .personal-info .box-container .box {
     padding: 1rem 0;
 }
 
-.about .row .personal-info .box-container .box h3 span{
+.about .row .personal-info .box-container .box h3 {
+    font-size: 1.8rem; /* Slightly reduced font size */
+    color: var(--bg-color);
+    padding: 0.5rem 0;
+}
+
+.about .row .personal-info .box-container .box h3 span {
     color: #999;
     font-size: 1.7rem;
 }
